@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — AMC CZYRKA Premium Handwerk</title>
+  <meta name="description" content="Realisierte Projekte von AMC CZYRKA: Schiebetore, Fenster, Türen und luxuriöse Bad-Sanierungen mit Kundenbewertungen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,30..100;1,9..144,400..600,30..100&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =============== HEADER =============== -->
+  <header class="site-header scrolled">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="brand" aria-label="AMC CZYRKA Startseite">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="4" width="56" height="56" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <path d="M32 14 L18 44 H26 L32 31 L38 44 H46 Z" fill="currentColor"/>
+          <path d="M28 38 H36" stroke="currentColor" stroke-width="2.5"/>
+        </svg>
+        <span class="brand-text">AMC<br><small>CZYRKA</small></span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#testimonials">Bewertungen</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="angebot.html" class="btn btn-primary nav-cta">Kostenloses Angebot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- =============== PAGE HEADER =============== -->
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>›</span>
+        <span>Portfolio</span>
+      </div>
+      <h1>Realisierte <span class="accent">Projekte</span></h1>
+      <p>
+        Ein Auszug unserer Arbeiten — von eleganten Schiebetoren über maßgefertigte Fenster
+        bis hin zu luxuriösen Bad-Sanierungen.
+      </p>
+    </div>
+  </section>
+
+  <!-- =============== PROJECT FILTERS & GRID =============== -->
+  <section id="projekte">
+    <div class="container">
+
+      <div class="portfolio-filters reveal" role="tablist" aria-label="Projekte filtern">
+        <button class="filter-btn active" data-filter="all">Alle Projekte</button>
+        <button class="filter-btn" data-filter="schiebetore" id="schiebetore">Schiebetore & Zäune</button>
+        <button class="filter-btn" data-filter="fenster" id="fenster">Fenster & Türen</button>
+        <button class="filter-btn" data-filter="badezimmer" id="badezimmer">Badezimmer</button>
+        <button class="filter-btn" data-filter="garagentore">Garagentore</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Schiebetore -->
+        <article class="project-card reveal" data-category="schiebetore">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Modernes Aluminium-Schiebetor in Anthrazit">
+            <span class="project-tag">Schiebetore</span>
+          </div>
+          <div class="project-content">
+            <h3>Aluminium-Schiebetor „Modena"</h3>
+            <p>Vollautomatisches Schiebetor mit Funkfernsteuerung und LED-Beleuchtung. Pulverbeschichtet in RAL 7016 Anthrazit.</p>
+            <div class="project-meta">
+              <span>Würzburg · 2025</span>
+              <strong>4,80 m × 1,80 m</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="schiebetore">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=800&q=80" alt="Elegantes Schiebetor mit Holzoptik">
+            <span class="project-tag">Schiebetore</span>
+          </div>
+          <div class="project-content">
+            <h3>Hybrid-Tor mit WPC-Füllung</h3>
+            <p>Aluminium-Rahmen mit witterungsbeständiger Holzoptik-Füllung. Inklusive Antrieb und Sicherheitslichtschranke.</p>
+            <div class="project-meta">
+              <span>Schweinfurt · 2025</span>
+              <strong>5,20 m × 1,90 m</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="schiebetore">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=80" alt="Stabmattenzaun mit Sichtschutz">
+            <span class="project-tag">Zaunanlage</span>
+          </div>
+          <div class="project-content">
+            <h3>Doppelstabmattenzaun mit Sichtschutz</h3>
+            <p>40 m durchgehende Zaunanlage mit Schiebetor und passender Pforte. Mattengittersystem mit Aluminium-Sichtschutzstreifen.</p>
+            <div class="project-meta">
+              <span>Aschaffenburg · 2024</span>
+              <strong>40 lfm</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fenster -->
+        <article class="project-card reveal" data-category="fenster">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Bodentiefe Fenster mit Aluminium-Rahmen">
+            <span class="project-tag">Fenster</span>
+          </div>
+          <div class="project-content">
+            <h3>Bodentiefe Panoramafenster</h3>
+            <p>3-fach-Verglasung mit Aluminium-Rahmen für Neubau-Einfamilienhaus. Energieeffizienzklasse A++ und Schallschutz.</p>
+            <div class="project-meta">
+              <span>Würzburg · 2025</span>
+              <strong>12 Elemente</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="fenster">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Holz-Aluminium-Fenster im Altbau">
+            <span class="project-tag">Fenster</span>
+          </div>
+          <div class="project-content">
+            <h3>Holz-Alu-Fenster für Altbau</h3>
+            <p>Altbau-Sanierung mit denkmalgerechten Holz-Aluminium-Fenstern. Sprossen nach historischem Vorbild, moderne Wärmedämmung.</p>
+            <div class="project-meta">
+              <span>Marktheidenfeld · 2024</span>
+              <strong>18 Fenster</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="fenster">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1503594384566-461fe158e797?auto=format&fit=crop&w=800&q=80" alt="Moderne Haustür mit Glaselementen">
+            <span class="project-tag">Türen</span>
+          </div>
+          <div class="project-content">
+            <h3>Designer-Haustür mit Seitenteil</h3>
+            <p>Maßgefertigte Aluminium-Haustür mit Edelstahl-Applikationen, Fingerprint-Schloss und geätztem Glasseitenteil.</p>
+            <div class="project-meta">
+              <span>Gemünden · 2025</span>
+              <strong>110 × 220 cm</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- Badezimmer -->
+        <article class="project-card reveal" data-category="badezimmer">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=800&q=80" alt="Luxuriöses Bad mit freistehender Badewanne">
+            <span class="project-tag">Bad-Sanierung</span>
+          </div>
+          <div class="project-content">
+            <h3>Spa-Bad mit freistehender Wanne</h3>
+            <p>Komplette Sanierung: freistehende Badewanne, ebenerdige Walk-in-Dusche, Großformatfliesen und indirekte LED-Beleuchtung.</p>
+            <div class="project-meta">
+              <span>Würzburg · 2025</span>
+              <strong>14 m²</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="badezimmer">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=800&q=80" alt="Modernes Badezimmer in Naturtönen">
+            <span class="project-tag">Bad-Sanierung</span>
+          </div>
+          <div class="project-content">
+            <h3>Naturstein-Bad in warmen Tönen</h3>
+            <p>Bad-Komplettsanierung mit Travertin-Optik, Doppelwaschtisch aus Massivholz und versteckter Spülung. Barrierefrei geplant.</p>
+            <div class="project-meta">
+              <span>Schweinfurt · 2024</span>
+              <strong>11 m²</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="badezimmer">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Gäste-WC modern gestaltet">
+            <span class="project-tag">Gäste-WC</span>
+          </div>
+          <div class="project-content">
+            <h3>Gäste-WC im Boutique-Stil</h3>
+            <p>Kleine Fläche, große Wirkung: dunkle Fliesen, Messing-Armaturen und Spiegelschrank mit integrierter Beleuchtung.</p>
+            <div class="project-meta">
+              <span>Lohr am Main · 2024</span>
+              <strong>3 m²</strong>
+            </div>
+          </div>
+        </article>
+
+        <!-- Garagentore -->
+        <article class="project-card reveal" data-category="garagentore">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?auto=format&fit=crop&w=800&q=80" alt="Modernes Sektional-Garagentor">
+            <span class="project-tag">Garagentor</span>
+          </div>
+          <div class="project-content">
+            <h3>Sektionaltor mit Sicke-Design</h3>
+            <p>Wärmegedämmtes Sektionaltor mit elektrischem Antrieb und Funkhandsender. Pulverbeschichtet in Wunschfarbe.</p>
+            <div class="project-meta">
+              <span>Karlstadt · 2025</span>
+              <strong>2,50 m × 2,12 m</strong>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =============== TESTIMONIALS =============== -->
+  <section style="background: var(--color-bg-cream-soft);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="h2">Kunden<span class="accent">stimmen</span></h2>
+        <p class="subtitle">
+          Echte Bewertungen aus echten Projekten — unsere Kunden teilen ihre Erfahrungen.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial reveal">
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            Vom ersten Beratungstermin bis zur Endabnahme alles perfekt. Unser Schiebetor wurde
+            in nur drei Wochen geliefert und sauber montiert — top Qualität zu einem fairen Preis.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <strong>Markus S.</strong>
+              <span>Schiebetor · Würzburg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            Die Bad-Sanierung war eine echte Verwandlung. Das Team hat termingerecht gearbeitet und
+            jeden Wunsch berücksichtigt. Das Ergebnis übertrifft alle Erwartungen — wir sind begeistert!
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CB</div>
+            <div class="author-info">
+              <strong>Claudia B.</strong>
+              <span>Bad-Sanierung · Schweinfurt</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            Neue Fenster für unser Altbauhaus — Aufmaß, Lieferung, Einbau: alles aus einer Hand und
+            mit höchster Sorgfalt. Persönliche Beratung, ehrliche Kommunikation, makelloses Ergebnis.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TR</div>
+            <div class="author-info">
+              <strong>Thomas R.</strong>
+              <span>Fenster & Türen · Aschaffenburg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            Wir hatten ein klares Bild im Kopf — AMC CZYRKA hat es 1:1 umgesetzt, sogar besser als
+            erwartet. Preis-Leistung stimmt zu 100 %, kommunikativ und absolut zuverlässig.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AK</div>
+            <div class="author-info">
+              <strong>Andrea K.</strong>
+              <span>Gäste-WC · Lohr am Main</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            Neue Zaunanlage mit Schiebetor — 40 Meter, komplett innerhalb von einer Woche. Saubere
+            Arbeit, freundliche Monteure, fairer Preis. Wir empfehlen AMC CZYRKA gerne weiter.
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JH</div>
+            <div class="author-info">
+              <strong>Julia H.</strong>
+              <span>Zaunanlage · Aschaffenburg</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial reveal">
+          <div class="testimonial-stars" aria-label="5 von 5 Sternen">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">
+            Garagentor inklusive Antrieb, alles aus einer Hand. Montage war in einem halben Tag
+            erledigt, läuft seitdem absolut leise und zuverlässig. Top!
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">PB</div>
+            <div class="author-info">
+              <strong>Peter B.</strong>
+              <span>Garagentor · Karlstadt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FINAL CTA =============== -->
+  <section class="section-warm">
+    <div class="container">
+      <div class="cta-box reveal">
+        <h2>Ihr Projekt als <span class="accent">nächstes</span>?</h2>
+        <p>Lassen Sie uns über Ihre Ideen sprechen. Kostenlos, unverbindlich und mit echter Beratung.</p>
+        <div class="cta-box-buttons">
+          <a href="angebot.html" class="btn btn-primary">
+            Kostenloses Angebot anfordern
+            <svg class="btn-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="tel:+49123456789" class="btn btn-secondary">Direkt anrufen</a>
+        </div>
+        <div class="cta-box-trust">
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Kostenlose Erstberatung
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Unverbindliches Angebot
+          </span>
+          <span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Antwort in 24 Stunden
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="4" y="4" width="56" height="56" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <path d="M32 14 L18 44 H26 L32 31 L38 44 H46 Z" fill="currentColor"/>
+              <path d="M28 38 H36" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+            <span class="brand-text">AMC<br><small>CZYRKA</small></span>
+          </a>
+          <p>Premium Handwerk & Maßanfertigungen für Haus, Wohnung und Außenbereich. Qualität, die überzeugt.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 1 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Schnellzugriff</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#leistungen">Leistungen</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="angebot.html">Angebot</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <ul>
+            <li><a href="portfolio.html#schiebetore">Schiebetore & Zäune</a></li>
+            <li><a href="portfolio.html#fenster">Fenster & Türen</a></li>
+            <li><a href="portfolio.html#badezimmer">Bad-Sanierung</a></li>
+            <li><a href="angebot.html">Garagentore</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-contact">
+          <h4>Kontakt</h4>
+          <dl>
+            <dt><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Telefon:</dt>
+            <dd><a href="tel:+49123456789" style="color: inherit;">+49 123 456 789</a></dd>
+            <dt><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> E-Mail:</dt>
+            <dd><a href="mailto:info@amc-czyrka.de" style="color: inherit;">info@amc-czyrka.de</a></dd>
+            <dt><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Adresse:</dt>
+            <dd>Musterstraße 123<br>12345 Musterstadt</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 AMC CZYRKA. Alle Rechte vorbehalten.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
