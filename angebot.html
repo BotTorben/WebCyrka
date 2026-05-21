@@ -57,8 +57,45 @@
   <!-- =============== FORM =============== -->
   <section style="padding-top: var(--space-2xl);">
     <div class="container">
+      <!-- Banner shown when arriving from a product detail page -->
+      <div id="preselected-banner" class="preselected-banner reveal" style="display:none;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        <div>
+          <strong id="preselected-product"></strong>
+          <div id="preselected-details" style="font-size:0.88rem;color:var(--color-text-muted-dark);"></div>
+        </div>
+      </div>
+
       <div class="form-container reveal">
-        <form id="quote-form" novalidate>
+
+        <!-- Setup notice for the website owner — see images/README.md for instructions -->
+        <div class="formspree-info" id="formspree-setup-notice">
+          <strong>Hinweis für den Website-Betreiber:</strong> Damit Anfragen per E-Mail ankommen, muss eine Formspree-ID
+          eingetragen werden. Siehe <code>FORMULAR-EMAIL-SETUP.md</code> in deinem Projekt.
+        </div>
+
+        <!-- Success message shown after successful submission -->
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Vielen Dank für Ihre Anfrage!</h3>
+          <p>Wir haben Ihre Anfrage erhalten und melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+        </div>
+
+        <form id="quote-form"
+              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              method="POST"
+              novalidate>
+
+          <!-- Formspree configuration -->
+          <input type="hidden" name="_subject" value="Neue Anfrage über amc-czyrka.de">
+          <input type="hidden" name="_language" value="de">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+          <!-- Hidden fields populated by URL parameters from product detail pages -->
+          <input type="hidden" id="hidden-modell" name="Modell" value="">
+          <input type="hidden" id="hidden-kategorie" name="Kategorie" value="">
 
           <!-- 1. Kontakt -->
           <div class="form-section">

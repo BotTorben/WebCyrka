@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOMPLETT – Komfortbad — AMC CZYRKA</title>
+  <meta name="description" content="KOMPLETT – Das Komfortpaket für mittelgroße Bäder">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,30..100;1,9..144,400..600,30..100&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header scrolled">
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="brand" aria-label="AMC CZYRKA Startseite">
+        <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="4" y="4" width="56" height="56" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+          <path d="M32 14 L18 44 H26 L32 31 L38 44 H46 Z" fill="currentColor"/>
+          <path d="M28 38 H36" stroke="currentColor" stroke-width="2.5"/>
+        </svg>
+        <span class="brand-text">AMC<br><small>CZYRKA</small></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html#leistungen">Leistungen</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="index.html#testimonials">Bewertungen</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="angebot.html" class="btn btn-primary nav-cta">Kostenloses Angebot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="product-detail">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> ›
+        <a href="bad-sanierung.html">Bad-Sanierung & Fliesen</a> ›
+        <span>KOMPLETT – Komfortbad</span>
+      </div>
+
+      <div class="product-grid">
+        <div class="product-gallery">
+          <div class="product-gallery-main">
+            <img id="mainProductImage"
+                 src="images/bad-sanierung/bad-komplett/1.jpg"
+                 onerror="this.src='https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80'"
+                 alt="KOMPLETT – Komfortbad">
+          </div>
+          <div class="product-gallery-thumbs">
+        <button type="button" class="product-gallery-thumb active" data-img="images/bad-sanierung/bad-komplett/1.jpg" data-fallback="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80" aria-label="Bild 1">
+          <img src="images/bad-sanierung/bad-komplett/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1200&q=80'" alt="" loading="lazy">
+        </button>
+        <button type="button" class="product-gallery-thumb" data-img="images/bad-sanierung/bad-komplett/2.jpg" data-fallback="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80" aria-label="Bild 2">
+          <img src="images/bad-sanierung/bad-komplett/2.jpg" onerror="this.src='https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80'" alt="" loading="lazy">
+        </button>
+        <button type="button" class="product-gallery-thumb" data-img="images/bad-sanierung/bad-komplett/3.jpg" data-fallback="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" aria-label="Bild 3">
+          <img src="images/bad-sanierung/bad-komplett/3.jpg" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80'" alt="" loading="lazy">
+        </button>
+        <button type="button" class="product-gallery-thumb" data-img="images/bad-sanierung/bad-komplett/4.jpg" data-fallback="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80" aria-label="Bild 4">
+          <img src="images/bad-sanierung/bad-komplett/4.jpg" onerror="this.src='https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80'" alt="" loading="lazy">
+        </button>
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h1 class="product-info-name">KOMPLETT – Komfortbad</h1>
+          <div class="product-info-price"><small>Ab</small>€8.900,00</div>
+
+          <form class="product-options" id="configForm" data-modell="KOMPLETT – Komfortbad" data-kategorie="Bad-Sanierung & Fliesen">
+            <div class="product-option-group">
+              <label for="opt-breite">Fläche</label>
+              <select id="opt-breite" name="breite"><option value="bis 6 m²">bis 6 m²</option><option value="bis 8 m²" selected>bis 8 m²</option><option value="bis 10 m²">bis 10 m²</option></select>
+            </div>
+
+            <div class="product-option-group">
+              <label for="opt-hoehe">Variante</label>
+              <select id="opt-hoehe" name="hoehe"><option value="Dusche">Dusche</option><option value="Badewanne" selected>Badewanne</option><option value="Dusche + Wanne">Dusche + Wanne</option><option value="Bodengleiche Dusche">Bodengleiche Dusche</option></select>
+            </div>
+
+            <div class="product-option-group">
+              <label for="opt-farbe">Stil</label>
+              <select id="opt-farbe" name="farbe"><option value="Modern">Modern</option><option value="Klassisch">Klassisch</option><option value="Skandinavisch">Skandinavisch</option><option value="Mediterran">Mediterran</option><option value="Industrial">Industrial</option></select>
+            </div>
+
+            <div class="product-options-row">
+              <div class="product-option-group">
+                <label for="opt-menge">Anzahl</label>
+                <select id="opt-menge" name="menge"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+              </div>
+              <button type="button" class="product-cta" onclick="requestQuote()">
+                Angebot anfordern
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </form>
+
+          <div class="product-meta-row">
+            <span class="product-meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              </svg>
+              Maßanfertigung
+            </span>
+            <span class="product-meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+              Bauzeit ca. 3–4 Wochen
+            </span>
+            <span class="product-meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              Inkl. Aufmaß möglich
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-description">
+        <h2>KOMPLETT – Das Komfortpaket für mittelgroße Bäder</h2>
+          <p>Das <strong>Komfortpaket für Bäder bis 10 m²</strong>: hochwertige Großformatfliesen, bodengleiche Dusche, neue Sanitärobjekte in Premium-Qualität.</p>
+          <p>Mit moderner LED-Beleuchtung und Spiegelschrank-Vorbereitung. Auf Wunsch mit Fußbodenheizung.</p>
+
+        <h3>Im Lieferumfang enthalten:</h3>
+        <ul>
+            <li>Komplette Demontage</li>
+            <li>Großformat-Fliesen (Premium, ca. 30 m²)</li>
+            <li>Bodengleiche Dusche mit Glaswand</li>
+            <li>Premium-Sanitärobjekte</li>
+            <li>LED-Beleuchtung und Spiegelschrank</li>
+            <li>Endreinigung</li>
+        </ul>
+
+        <div class="product-description-notes">
+          <p><strong>Lieferzeit:</strong> Bauzeit ca. 3–4 Wochen</p>
+          <p><strong>Hinweis:</strong> Preis ist ein Richtwert – exakte Kalkulation nach Vor-Ort-Termin.</p>
+        </div>
+
+        <h3>Ihre Vorteile:</h3>
+        <ul>
+            <li>Hochwertige Großformat-Fliesen</li>
+            <li>Bodengleiche Dusche – modern & barrierefreundlich</li>
+            <li>Premium-Sanitär</li>
+            <li>Moderne LED-Beleuchtung</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="4" y="4" width="56" height="56" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <path d="M32 14 L18 44 H26 L32 31 L38 44 H46 Z" fill="currentColor"/>
+              <path d="M28 38 H36" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+            <span class="brand-text">AMC<br><small>CZYRKA</small></span>
+          </a>
+          <p>Premium Handwerk & Maßanfertigungen für Haus, Wohnung und Außenbereich.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Schnellzugriff</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#leistungen">Leistungen</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="angebot.html">Angebot</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Leistungen</h4>
+          <ul>
+            <li><a href="schiebetore.html">Schiebetore</a></li>
+            <li><a href="pforten.html">Pforten</a></li>
+            <li><a href="garagentore.html">Garagentore</a></li>
+            <li><a href="fenster-tueren.html">Fenster &amp; Türen</a></li>
+            <li><a href="bad-sanierung.html">Bad-Sanierung &amp; Fliesen</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-contact">
+          <h4>Kontakt</h4>
+          <dl>
+            <dt>Telefon:</dt>
+            <dd><a href="tel:+49123456789" style="color: inherit;">+49 123 456 789</a></dd>
+            <dt>E-Mail:</dt>
+            <dd><a href="mailto:info@amc-czyrka.de" style="color: inherit;">info@amc-czyrka.de</a></dd>
+            <dt>Adresse:</dt>
+            <dd>Musterstraße 123<br>12345 Musterstadt</dd>
+          </dl>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AMC CZYRKA. Alle Rechte vorbehalten.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+          <a href="#">AGB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
