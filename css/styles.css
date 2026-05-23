@@ -3610,3 +3610,224 @@ section {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+/* ==========================================================================
+   PRODUCT DETAIL — Final Overrides (Fix Button alignment + new Description)
+   ========================================================================== */
+
+/* Button & Menge nebeneinander, sauber am Boden ausgerichtet */
+.product-options .product-options-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-sm);
+  align-items: end;
+}
+
+.product-info .product-cta {
+  align-self: end;
+  width: 100%;
+  height: auto;
+  padding: 0.95rem 1.4rem;
+  background: linear-gradient(135deg, var(--color-copper) 0%, var(--color-copper-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  box-shadow: 0 4px 14px -4px rgba(193, 154, 107, 0.4);
+  line-height: 1.2;
+}
+
+.product-info .product-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(193, 154, 107, 0.5);
+}
+
+/* ==========================================================================
+   PRODUCT DESCRIPTION — Collapsible card with proper padding + 2-col layout
+   ========================================================================== */
+
+details.product-description {
+  display: block;
+  margin-top: var(--space-xl);
+  max-width: 100%;
+  background: white;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(193, 154, 107, 0.18);
+  box-shadow: 0 4px 18px -10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 0;
+}
+
+details.product-description summary {
+  cursor: pointer;
+  list-style: none;
+  padding: var(--space-md) var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  transition: background-color var(--transition-base);
+  user-select: none;
+}
+
+details.product-description summary:hover {
+  background-color: rgba(193, 154, 107, 0.04);
+}
+
+details.product-description summary::-webkit-details-marker { display: none; }
+details.product-description summary::marker { display: none; }
+
+details.product-description summary h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.3vw, 1.65rem);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--color-text-dark);
+  margin: 0;
+  line-height: 1.3;
+  flex: 1;
+  font-variation-settings: "opsz" 96;
+}
+
+.product-description-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(193, 154, 107, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-copper-dark);
+  flex-shrink: 0;
+  transition: background-color var(--transition-base);
+}
+
+details.product-description summary:hover .product-description-toggle {
+  background: rgba(193, 154, 107, 0.22);
+}
+
+.product-description-toggle svg {
+  transition: transform 0.35s ease;
+}
+
+details.product-description[open] .product-description-toggle svg {
+  transform: rotate(180deg);
+}
+
+/* Body */
+.product-description-body {
+  padding: 0 var(--space-xl) var(--space-xl);
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: var(--space-xl);
+  border-top: 1px solid rgba(193, 154, 107, 0.12);
+  margin-top: 0;
+  padding-top: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  details.product-description summary { padding: var(--space-md); }
+  .product-description-body {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-md) var(--space-md);
+  }
+}
+
+/* Text column (left) */
+.product-description-text p {
+  color: var(--color-text-dark);
+  line-height: 1.7;
+  margin: 0 0 var(--space-sm);
+  font-size: 1rem;
+}
+
+.product-description-text p:last-child { margin-bottom: 0; }
+
+.product-description-text strong {
+  color: var(--color-text-dark);
+  font-weight: 700;
+}
+
+/* Aside column (right) — Lieferumfang, Notes, Vorteile */
+.product-description-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.product-description-block {
+  background: rgba(245, 241, 232, 0.5);
+  border-radius: 8px;
+  padding: var(--space-md);
+}
+
+.product-description-block h3 {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-copper-dark);
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.product-description-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-description-block ul li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.45rem;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+  font-size: 0.92rem;
+}
+
+.product-description-block ul li:last-child { margin-bottom: 0; }
+
+.product-description-block ul li::before {
+  content: '';
+  position: absolute;
+  left: 0.3rem;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-copper-dark);
+}
+
+/* Notes block (Lieferzeit / Hinweis) — special styling */
+.product-description-notes {
+  background: linear-gradient(135deg, rgba(193, 154, 107, 0.1) 0%, rgba(193, 154, 107, 0.05) 100%);
+  border-left: 3px solid var(--color-copper);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.9rem;
+}
+
+.product-description-notes p {
+  margin: 0.3rem 0;
+  color: var(--color-text-dark);
+  line-height: 1.5;
+}
+
+.product-description-notes p:first-child { margin-top: 0; }
+.product-description-notes p:last-child { margin-bottom: 0; }
+
+.product-description-notes strong {
+  color: var(--color-copper-dark);
+  font-weight: 700;
+}

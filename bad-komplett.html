@@ -120,34 +120,55 @@
         </div>
       </div>
 
-      <div class="product-description">
-        <h2>KOMPLETT – Das Komfortpaket für mittelgroße Bäder</h2>
-          <p>Das <strong>Komfortpaket für Bäder bis 10 m²</strong>: hochwertige Großformatfliesen, bodengleiche Dusche, neue Sanitärobjekte in Premium-Qualität.</p>
-          <p>Mit moderner LED-Beleuchtung und Spiegelschrank-Vorbereitung. Auf Wunsch mit Fußbodenheizung.</p>
+      <!-- Einklappbare Produktbeschreibung -->
+      <details class="product-description" open>
+        <summary>
+          <h2>KOMPLETT – Das Komfortpaket für mittelgroße Bäder</h2>
+          <span class="product-description-toggle" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
+        </summary>
 
-        <h3>Im Lieferumfang enthalten:</h3>
-        <ul>
-            <li>Komplette Demontage</li>
+        <div class="product-description-body">
+          <!-- Linke Spalte: Fließtext -->
+          <div class="product-description-text">
+            <p>Das <strong>Komfortpaket für Bäder bis 10 m²</strong>: hochwertige Großformatfliesen, bodengleiche Dusche, neue Sanitärobjekte in Premium-Qualität.</p>
+          <p>Mit moderner LED-Beleuchtung und Spiegelschrank-Vorbereitung. Auf Wunsch mit Fußbodenheizung.</p>
+          </div>
+
+          <!-- Rechte Spalte: Lieferumfang, Hinweise, Vorteile -->
+          <aside class="product-description-aside">
+            <div class="product-description-block">
+              <h3>Im Lieferumfang enthalten</h3>
+              <ul>
+                <li>Komplette Demontage</li>
             <li>Großformat-Fliesen (Premium, ca. 30 m²)</li>
             <li>Bodengleiche Dusche mit Glaswand</li>
             <li>Premium-Sanitärobjekte</li>
             <li>LED-Beleuchtung und Spiegelschrank</li>
             <li>Endreinigung</li>
-        </ul>
+              </ul>
+            </div>
 
-        <div class="product-description-notes">
-          <p><strong>Lieferzeit:</strong> Bauzeit ca. 3–4 Wochen</p>
-          <p><strong>Hinweis:</strong> Preis ist ein Richtwert – exakte Kalkulation nach Vor-Ort-Termin.</p>
-        </div>
+            <div class="product-description-notes">
+              <p><strong>Lieferzeit:</strong> Bauzeit ca. 3–4 Wochen</p>
+              <p><strong>Hinweis:</strong> Preis ist ein Richtwert – exakte Kalkulation nach Vor-Ort-Termin.</p>
+            </div>
 
-        <h3>Ihre Vorteile:</h3>
-        <ul>
-            <li>Hochwertige Großformat-Fliesen</li>
+            <div class="product-description-block">
+              <h3>Ihre Vorteile</h3>
+              <ul>
+                <li>Hochwertige Großformat-Fliesen</li>
             <li>Bodengleiche Dusche – modern & barrierefreundlich</li>
             <li>Premium-Sanitär</li>
             <li>Moderne LED-Beleuchtung</li>
-        </ul>
-      </div>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </details>
     </div>
   </section>
 
