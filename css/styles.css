@@ -3831,3 +3831,55 @@ details.product-description[open] .product-description-toggle svg {
   color: var(--color-copper-dark);
   font-weight: 700;
 }
+
+/* ==========================================================================
+   FINAL FIX — Button als eigener Block, Menge kompakt links
+   (überschreibt alle vorherigen .product-cta-Regeln definitiv)
+   ========================================================================== */
+
+/* Menge-Feld nimmt nur 120px, nicht volle Breite */
+.product-info .product-option-group--small {
+  max-width: 130px;
+}
+
+/* Angebot-Button: eigener Block, volle Breite, deutlich abgesetzt */
+.product-info .product-cta,
+.product-info form .product-cta,
+.product-info button.product-cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.6rem !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: var(--space-sm) 0 0 !important;
+  padding: 1.05rem 1.5rem !important;
+  align-self: stretch !important;
+  line-height: 1.2 !important;
+  background: linear-gradient(135deg, var(--color-copper) 0%, var(--color-copper-dark) 100%) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-family: var(--font-body) !important;
+  font-size: 1.02rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  transition: transform var(--transition-base), box-shadow var(--transition-base) !important;
+  box-shadow: 0 6px 18px -6px rgba(193, 154, 107, 0.5) !important;
+}
+
+.product-info .product-cta:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 22px -6px rgba(193, 154, 107, 0.6) !important;
+}
+
+.product-info .product-cta svg {
+  flex-shrink: 0;
+}
+
+/* Alte product-options-row Regeln neutralisieren (HTML benutzt sie nicht mehr) */
+.product-options-row { display: contents; }
