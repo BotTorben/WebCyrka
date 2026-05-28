@@ -3883,3 +3883,86 @@ details.product-description[open] .product-description-toggle svg {
 
 /* Alte product-options-row Regeln neutralisieren (HTML benutzt sie nicht mehr) */
 .product-options-row { display: contents; }
+
+/* ==========================================================================
+   ZUBEHÖR — Rabatt-Darstellung (Katalog + Produktdetail)
+   ========================================================================== */
+
+/* Katalog-Karte: Rabatt-Badge */
+.catalog-card { position: relative; }
+
+.catalog-card-discount {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 3;
+  background: #c0392b;
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 2px 8px -2px rgba(192, 57, 43, 0.5);
+}
+
+/* Katalog-Karte: durchgestrichener Preis */
+.catalog-card-price--sale {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.catalog-price-old {
+  color: var(--color-text-muted-dark);
+  text-decoration: line-through;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.catalog-card-price--sale strong {
+  color: #c0392b;
+  font-size: 1.15rem;
+}
+
+/* Zubehör: Bilder mit weißem Hintergrund nicht beschneiden */
+.catalog-card-image--contain img,
+.product-gallery-main--contain img {
+  object-fit: contain !important;
+  background: white;
+}
+
+/* Produktdetail: Rabatt-Preis-Block */
+.product-info-price--sale {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.product-discount-badge {
+  background: #c0392b;
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  letter-spacing: 0.02em;
+}
+
+.product-price-old {
+  color: var(--color-text-muted-dark);
+  text-decoration: line-through;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.product-price-new {
+  color: #c0392b;
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 600;
+}
