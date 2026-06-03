@@ -12,7 +12,7 @@ Die einfachste Lösung: **Formspree** (kostenlos für bis zu **50 Anfragen pro M
 ### 1. Account anlegen
 - Gehe auf **https://formspree.io** und klicke auf „Get Started Free".
 - Registriere dich mit der E-Mail-Adresse, an die später alle Anfragen geschickt werden sollen
-  (z. B. `info@amc-czyrka.de`).
+  (z. B. `AMC-Schiebetore@gmx.de`).
 
 ### 2. Neue Form anlegen
 - Klicke nach dem Login auf **„+ New Form"**.

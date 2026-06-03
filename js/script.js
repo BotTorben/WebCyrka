@@ -525,3 +525,81 @@ function requestQuote() {
     else if (e.key === 'ArrowLeft') showPrev();
   });
 })();
+
+/* ============================================================================
+   Bad-Projekt-Detailseiten — Thumbnail-Wechsel + Hero-Lightbox
+   ============================================================================ */
+(function initBadProjektHero() {
+  const heroMain = document.getElementById('projektHeroMain');
+  const thumbs = document.getElementById('projektThumbs');
+  if (!heroMain || !thumbs) return;
+
+  const thumbButtons = Array.from(thumbs.querySelectorAll('.projekt-thumb'));
+
+  // Sammle alle Bilder (Hero + Thumbnails) für Lightbox-Navigation
+  const allImages = [
+    { src: heroMain.src, alt: heroMain.alt }
+  ];
+  thumbButtons.forEach(btn => {
+    const img = btn.querySelector('img');
+    allImages.push({ src: img.src, alt: img.alt, fallback: btn.dataset.fallback });
+  });
+
+  // Thumbnail-Klick: wechselt Hero-Bild
+  thumbButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      heroMain.style.opacity = '0';
+      setTimeout(() => {
+        heroMain.src = img.src;
+        heroMain.alt = img.alt;
+        heroMain.style.opacity = '1';
+      }, 150);
+      thumbButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Lightbox bei Klick auf Hero-Bild
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  if (!lightbox || !lightboxImg) return;
+
+  const btnClose = lightbox.querySelector('.lightbox-close');
+  const btnPrev = lightbox.querySelector('.lightbox-prev');
+  const btnNext = lightbox.querySelector('.lightbox-next');
+  let currentIdx = 0;
+
+  function openLightbox(idx) {
+    currentIdx = idx;
+    lightboxImg.src = allImages[idx].src;
+    lightboxImg.alt = allImages[idx].alt || '';
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  function next() { openLightbox((currentIdx + 1) % allImages.length); }
+  function prev() { openLightbox((currentIdx - 1 + allImages.length) % allImages.length); }
+
+  heroMain.parentElement.addEventListener('click', () => {
+    // Find current index based on current src
+    const idx = allImages.findIndex(i => i.src === heroMain.src);
+    openLightbox(idx >= 0 ? idx : 0);
+  });
+
+  btnClose.addEventListener('click', closeLightbox);
+  btnPrev.addEventListener('click', prev);
+  btnNext.addEventListener('click', next);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowRight') next();
+    else if (e.key === 'ArrowLeft') prev();
+  });
+})();
