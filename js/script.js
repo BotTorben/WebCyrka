@@ -474,3 +474,54 @@ function requestQuote() {
     sorted.forEach(card => grid.appendChild(card));
   });
 })();
+
+/* ============================================================================
+   Garagentor-Portfolio — Lightbox-Funktion
+   ============================================================================ */
+(function initLightbox() {
+  const grid = document.getElementById('galleryGrid');
+  const lightbox = document.getElementById('lightbox');
+  if (!grid || !lightbox) return;
+
+  const items = Array.from(grid.querySelectorAll('.gallery-item'));
+  const lightboxImg = document.getElementById('lightboxImg');
+  const btnClose = lightbox.querySelector('.lightbox-close');
+  const btnPrev = lightbox.querySelector('.lightbox-prev');
+  const btnNext = lightbox.querySelector('.lightbox-next');
+  let currentIndex = 0;
+
+  function open(idx) {
+    currentIndex = idx;
+    lightboxImg.src = items[idx].dataset.img;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  function showNext() { open((currentIndex + 1) % items.length); }
+  function showPrev() { open((currentIndex - 1 + items.length) % items.length); }
+
+  items.forEach((item, idx) => item.addEventListener('click', () => open(idx)));
+  btnClose.addEventListener('click', close);
+  btnPrev.addEventListener('click', showPrev);
+  btnNext.addEventListener('click', showNext);
+
+  // Klick auf Hintergrund schließt
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  // Keyboard-Steuerung
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowRight') showNext();
+    else if (e.key === 'ArrowLeft') showPrev();
+  });
+})();

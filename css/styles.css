@@ -1551,30 +1551,13 @@ section {
 
 .tile-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
-}
-
-.tile-grid .tile:nth-child(1),
-.tile-grid .tile:nth-child(2),
-.tile-grid .tile:nth-child(3) {
-  grid-column: span 2;
-}
-
-.tile-grid .tile:nth-child(4) {
-  grid-column: 2 / span 2;
-}
-
-.tile-grid .tile:nth-child(5) {
-  grid-column: 4 / span 2;
 }
 
 @media (max-width: 900px) {
   .tile-grid {
     grid-template-columns: 1fr 1fr;
-  }
-  .tile-grid .tile {
-    grid-column: auto !important;
   }
 }
 
@@ -3965,4 +3948,321 @@ details.product-description[open] .product-description-toggle svg {
   font-family: var(--font-display);
   font-size: 1.85rem;
   font-weight: 600;
+}
+
+/* ==========================================================================
+   GARAGENTOR-PORTFOLIO — Bildergalerie + Lightbox
+   ========================================================================== */
+
+.gallery-section {
+  background: var(--color-bg-cream);
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.gallery-section .container {
+  max-width: 1200px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-sm);
+}
+
+.gallery-item {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(193, 154, 107, 0.15);
+  background: white;
+  padding: 0;
+  cursor: zoom-in;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 14px -6px rgba(0,0,0,0.08);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.gallery-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08), 0 16px 32px -10px rgba(0,0,0,0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 14, 12, 0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: var(--space-md);
+}
+
+.lightbox.active {
+  display: flex;
+  animation: lightboxFadeIn 0.2s ease-out;
+}
+
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-image {
+  max-width: 92vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.18);
+  cursor: pointer;
+  font-size: 1.4rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-base), transform var(--transition-base);
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(193, 154, 107, 0.7);
+  transform: scale(1.06);
+}
+
+.lightbox-close {
+  top: 24px;
+  right: 24px;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.lightbox-prev { left: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 24px; top: 50%; transform: translateY(-50%); }
+.lightbox-prev:hover { transform: translateY(-50%) scale(1.06); }
+.lightbox-next:hover { transform: translateY(-50%) scale(1.06); }
+
+@media (max-width: 600px) {
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-close { top: 12px; right: 12px; }
+}
+
+/* ==========================================================================
+   FENSTER & TÜREN — Eko-Okna Hero-Schriftzug auf Cover-Bild
+   ========================================================================== */
+
+.detail-hero-bg {
+  position: relative;
+}
+
+.hero-brand-watermark {
+  position: absolute;
+  top: 50%;
+  right: clamp(2rem, 6vw, 5rem);
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  z-index: 2;
+  pointer-events: none;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-brand-watermark-eyebrow {
+  font-family: var(--font-body);
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-brand-watermark-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: white;
+  font-variation-settings: "opsz" 144;
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-copper-light) 60%, var(--color-copper) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+}
+
+.hero-brand-watermark-stars {
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  letter-spacing: 0.4em;
+  color: var(--color-copper-light);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Mobil: zentriert unten platzieren, damit es nicht den Titel überdeckt */
+@media (max-width: 900px) {
+  .hero-brand-watermark {
+    top: auto;
+    bottom: 1.5rem;
+    right: 50%;
+    transform: translateX(50%);
+    align-items: center;
+  }
+  .hero-brand-watermark-name {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-brand-watermark-eyebrow,
+  .hero-brand-watermark-stars {
+    display: none;
+  }
+  .hero-brand-watermark-name {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================================================
+   REALIZATIONS PORTFOLIO — Bad-Sanierung Projekt-Karten
+   (Stil orientiert an bramyprodukcja.pl/realizacje)
+   ========================================================================== */
+
+.realizations-section {
+  background: var(--color-bg-cream);
+  padding: var(--space-xl) 0 var(--space-2xl);
+}
+
+.realizations-section .container {
+  max-width: 1200px;
+}
+
+.realizations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+@media (max-width: 900px) {
+  .realizations-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .realizations-grid { grid-template-columns: 1fr; }
+}
+
+.realization-card {
+  background: white;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05), 0 4px 14px -6px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.realization-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08), 0 22px 40px -12px rgba(0,0,0,0.18);
+}
+
+.realization-card-image-link {
+  display: block;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background: var(--color-bg-cream);
+}
+
+.realization-card-image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.realization-card:hover .realization-card-image-link img {
+  transform: scale(1.04);
+}
+
+.realization-card-body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.6rem;
+}
+
+.realization-card-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--color-bg-dark);
+  margin: 0;
+}
+
+.realization-card-text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(15, 14, 12, 0.7);
+  margin: 0;
+  flex: 1;
+}
+
+.realization-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-copper-dark);
+  text-decoration: none;
+  transition: color var(--transition-base), gap var(--transition-base);
+  align-self: flex-start;
+}
+
+.realization-card-link:hover {
+  color: var(--color-copper);
+  gap: 0.7rem;
+}
+
+.realization-card-link svg {
+  transition: transform var(--transition-base);
+}
+
+.realization-card-link:hover svg {
+  transform: translateX(2px);
 }
