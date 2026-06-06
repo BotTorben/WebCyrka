@@ -1053,6 +1053,14 @@ section {
   color: rgba(245, 241, 232, 0.6);
 }
 
+.breadcrumb-ft {
+    display: inline-flex;
+    gap: 0.5rem;
+    margin-bottom: var(--space-md);
+    font-size: 0.85rem;
+    color: black;
+}
+
 .breadcrumb a {
   color: var(--color-copper);
   transition: color var(--transition-base);
@@ -1808,7 +1816,8 @@ section {
   font-weight: 500;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-sm);
-  font-variation-settings: "opsz" 144;
+  font-variation-settings: "opsz" 60, "SOFT" 30;
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1, "dlig" 0, "salt" 0, "ss01" 0, "ss02" 0, "ss03" 0, "ss04" 0, "ss05" 0, "ss06" 0;
 }
 
 .detail-hero-lead {
@@ -4077,76 +4086,6 @@ details.product-description[open] .product-description-toggle svg {
    ========================================================================== */
 
 .detail-hero-bg {
-  position: relative;
-}
-
-.hero-brand-watermark {
-  position: absolute;
-  top: 50%;
-  right: clamp(2rem, 6vw, 5rem);
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-  z-index: 2;
-  pointer-events: none;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
-}
-
-.hero-brand-watermark-eyebrow {
-  font-family: var(--font-body);
-  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.hero-brand-watermark-name {
-  font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
-  font-weight: 400;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  color: white;
-  font-variation-settings: "opsz" 144;
-  background: linear-gradient(135deg, #ffffff 0%, var(--color-copper-light) 60%, var(--color-copper) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
-}
-
-.hero-brand-watermark-stars {
-  font-size: clamp(0.85rem, 1vw, 1rem);
-  letter-spacing: 0.4em;
-  color: var(--color-copper-light);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-/* Mobil: zentriert unten platzieren, damit es nicht den Titel überdeckt */
-@media (max-width: 900px) {
-  .hero-brand-watermark {
-    top: auto;
-    bottom: 1.5rem;
-    right: 50%;
-    transform: translateX(50%);
-    align-items: center;
-  }
-  .hero-brand-watermark-name {
-    font-size: 2.4rem;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero-brand-watermark-eyebrow,
-  .hero-brand-watermark-stars {
-    display: none;
-  }
-  .hero-brand-watermark-name {
-    font-size: 2rem;
-  }
 }
 
 /* ==========================================================================
@@ -4505,4 +4444,63 @@ details.product-description[open] .product-description-toggle svg {
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
   margin: 0 0 0.8rem 0;
+}
+
+/* ==========================================================================
+   FENSTER & TÜREN — Eko-Okna Partner-Logo auf Hero-Bild
+   (Logo wird oben rechts auf das Hero-Bild gelegt)
+   ========================================================================== */
+
+.hero-partner-logo {
+  position: absolute;
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 4vw, 3rem);
+  height: clamp(50px, 6vw, 100px);
+  width: auto;
+  z-index: 2;
+  filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.4));
+  /* Hintergrund weiß, falls Logo transparent ist und auf dunklem Bildbereich liegt
+     Wenn du das nicht möchtest, einfach background + padding rausnehmen */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 14px;
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .hero-partner-logo {
+    height: 50px;
+    top: 1rem;
+    right: 1rem;
+    padding: 6px 10px;
+  }
+}
+
+/* ==========================================================================
+   FIRMEN-LOGO im Header/Footer (Progressive Enhancement)
+   Wenn images/amc-czyrka-logo.png existiert, wird das Bild angezeigt
+   und das SVG + Text-Logo ausgeblendet. Sonst Fallback auf SVG+Text.
+   ========================================================================== */
+
+.brand-logo-image {
+  display: none;          /* per default versteckt */
+  height: auto;
+  max-height: 60px;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Wenn das Bild geladen wurde (JS setzt .loaded), wird es sichtbar */
+.brand-logo-image.loaded {
+  display: block;
+}
+
+/* Wenn das Bild geladen wurde, blende SVG-Mark + Text-Logo aus */
+.brand--has-image .brand-mark,
+.brand--has-image .brand-text {
+  display: none;
+}
+
+/* Im Footer ggf. etwas größer */
+.site-footer .brand-logo-image {
+  max-height: 72px;
 }
