@@ -4244,7 +4244,7 @@ details.product-description[open] .product-description-toggle svg {
 
 .projekt-hero-thumbs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-sm);
 }
 
@@ -4503,4 +4503,76 @@ details.product-description[open] .product-description-toggle svg {
 /* Im Footer ggf. etwas größer */
 .site-footer .brand-logo-image {
   max-height: 72px;
+}
+
+/* ==========================================================================
+   ÜBER UNS — Technologie-Feature mit Video + Standort
+   ========================================================================== */
+
+.tech-feature {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .tech-feature {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+.tech-feature-media {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+.tech-feature-media video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.tech-feature-text h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--color-bg-dark);
+  margin: 0 0 var(--space-sm) 0;
+  font-variation-settings: "opsz" 60;
+}
+
+.tech-feature-text p {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: rgba(15, 14, 12, 0.78);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.tech-feature-text p strong {
+  color: var(--color-bg-dark);
+  font-weight: 600;
+}
+
+.standort-image {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, 0.25);
+}
+
+.standort-image img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
