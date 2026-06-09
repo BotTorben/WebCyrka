@@ -4545,7 +4545,7 @@ details.product-description[open] .product-description-toggle svg {
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: var(--color-bg-dark);
+  color: white;
   margin: 0 0 var(--space-sm) 0;
   font-variation-settings: "opsz" 60;
 }
@@ -4554,12 +4554,12 @@ details.product-description[open] .product-description-toggle svg {
   font-family: var(--font-body);
   font-size: 1.02rem;
   line-height: 1.7;
-  color: rgba(15, 14, 12, 0.78);
+  color: white;
   margin: 0 0 var(--space-sm) 0;
 }
 
 .tech-feature-text p strong {
-  color: var(--color-bg-dark);
+  color: white;
   font-weight: 600;
 }
 
@@ -4575,4 +4575,20 @@ details.product-description[open] .product-description-toggle svg {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* ==========================================================================
+   FIX: Produkt-Galerie — ganzes Produkt zeigen statt zuschneiden
+   (überschreibt frühere doppelte .product-gallery-main-Regeln mit cover)
+   ========================================================================== */
+.product-gallery-main {
+  background: #fff;
+}
+.product-gallery-main img {
+  object-fit: contain;
+  padding: var(--space-md);
+}
+.product-gallery-thumb img {
+  object-fit: contain;
+  padding: 0.4rem;
 }

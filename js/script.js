@@ -443,7 +443,7 @@ function requestQuote() {
         if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalText; }
       }
     } catch (err) {
-      alert('Verbindungsfehler. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an: +49 123 456 789');
+      alert('Verbindungsfehler. Bitte versuchen Sie es erneut oder rufen Sie uns direkt an: +49 15510 147781');
       if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = originalText; }
     }
   });
