@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>COMPACT – Design-Pforte — AMC CZYRKA</title>
   <meta name="description" content="COMPACT – Selbst befüllbares Schiebetoren">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,30..100;1,9..144,400..600,30..100&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,6 +13,7 @@
   <header class="site-header scrolled">
     <nav class="nav" aria-label="Hauptnavigation">
       <a href="index.html" class="brand" aria-label="AMC CZYRKA Startseite">
+          <img class="brand-logo-image" src="images/amc-czyrka-logo.png" alt="AMC CZYRKA" onload="this.classList.add('loaded'); this.parentElement.classList.add('brand--has-image')" onerror="this.remove()">
         <svg class="brand-mark" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <rect x="4" y="4" width="56" height="56" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/>
           <path d="M32 14 L18 44 H26 L32 31 L38 44 H46 Z" fill="currentColor"/>
@@ -26,6 +25,7 @@
       <ul class="nav-links">
         <li><a href="index.html#leistungen">Leistungen</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
         <li><a href="index.html#testimonials">Bewertungen</a></li>
         <li><a href="index.html#kontakt">Kontakt</a></li>
         <li><a href="angebot.html" class="btn btn-primary nav-cta">Kostenloses Angebot</a></li>
@@ -46,18 +46,18 @@
           <div class="product-gallery-main">
             <img id="mainProductImage"
                  src="images/pforten/pforte-compact/1.jpg"
-                 onerror="this.src='https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80'"
+                 onerror="this.src='images/stock/photo-1605276374104-dee2a0ed3cd6.jpg'"
                  alt="COMPACT – Design-Pforte">
           </div>
           <div class="product-gallery-thumbs">
-        <button type="button" class="product-gallery-thumb active" data-img="images/pforten/pforte-compact/1.jpg" data-fallback="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80" aria-label="Bild 1">
-          <img src="images/pforten/pforte-compact/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?auto=format&fit=crop&w=1200&q=80'" alt="" loading="lazy">
+        <button type="button" class="product-gallery-thumb active" data-img="images/pforten/pforte-compact/1.jpg" data-fallback="images/stock/photo-1605276374104-dee2a0ed3cd6.jpg" aria-label="Bild 1">
+          <img src="images/pforten/pforte-compact/1.jpg" onerror="this.src='images/stock/photo-1605276374104-dee2a0ed3cd6.jpg'" alt="" loading="lazy">
         </button>
-        <button type="button" class="product-gallery-thumb" data-img="images/pforten/pforte-compact/2.jpg" data-fallback="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=1200&q=80" aria-label="Bild 2">
-          <img src="images/pforten/pforte-compact/2.jpg" onerror="this.src='https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=1200&q=80'" alt="" loading="lazy">
+        <button type="button" class="product-gallery-thumb" data-img="images/pforten/pforte-compact/2.jpg" data-fallback="images/stock/photo-1583608205776-bfd35f0d9f83.jpg" aria-label="Bild 2">
+          <img src="images/pforten/pforte-compact/2.jpg" onerror="this.src='images/stock/photo-1583608205776-bfd35f0d9f83.jpg'" alt="" loading="lazy">
         </button>
-        <button type="button" class="product-gallery-thumb" data-img="images/pforten/pforte-compact/3.jpg" data-fallback="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" aria-label="Bild 3">
-          <img src="images/pforten/pforte-compact/3.jpg" onerror="this.src='https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80'" alt="" loading="lazy">
+        <button type="button" class="product-gallery-thumb" data-img="images/pforten/pforte-compact/3.jpg" data-fallback="images/stock/photo-1568605114967-8130f3a36994.jpg" aria-label="Bild 3">
+          <img src="images/pforten/pforte-compact/3.jpg" onerror="this.src='images/stock/photo-1568605114967-8130f3a36994.jpg'" alt="" loading="lazy">
         </button>
           </div>
         </div>
