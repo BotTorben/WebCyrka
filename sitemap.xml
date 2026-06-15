@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Hauptseiten -->
+  <url><loc>https://amc-bayern.de/</loc><priority>1.0</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/schiebetore.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/pforten.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/garagentore.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/fenster-tueren.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/bad-sanierung.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/zubehoer.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/angebot.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/ueber-uns.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Portfolio-Projekte -->
+  <url><loc>https://amc-bayern.de/portfolio-projekt-01.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-02.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-03.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-04.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-05.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-06.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-07.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-08.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-09.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://amc-bayern.de/portfolio-projekt-10.html</loc><priority>0.7</priority><changefreq>yearly</changefreq></url>
+
+  <!-- Produktseiten Schiebetore -->
+  <url><loc>https://amc-bayern.de/schiebetor-compact.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/schiebetor-comfort.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/schiebetor-premium-classic.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/schiebetor-premium-modern.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/schiebetor-premium-star.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/schiebetor-prestige.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/schiebetor-supreme.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Produktseiten Pforten -->
+  <url><loc>https://amc-bayern.de/pforte-compact.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/pforte-comfort.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/pforte-premium-classic.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/pforte-premium-modern.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/pforte-premium-star.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/pforte-supreme.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Zubehör -->
+  <url><loc>https://amc-bayern.de/zubehoer-antrieb-fox.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/zubehoer-laufrollen-5.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/zubehoer-laufrollen-8.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/zubehoer-zahnstange-metall.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://amc-bayern.de/zubehoer-zahnstange-nylon.html</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+
+  <!-- Rechtliches -->
+  <url><loc>https://amc-bayern.de/impressum.html</loc><priority>0.3</priority></url>
+  <url><loc>https://amc-bayern.de/datenschutz.html</loc><priority>0.3</priority></url>
+  <url><loc>https://amc-bayern.de/agb.html</loc><priority>0.3</priority></url>
+
+</urlset>
